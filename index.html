@@ -1632,11 +1632,40 @@
 
 }
 
-    /* MOBIL – ZAROVNÁNÍ OTEVÍRACÍ DOBY */
+   /* MOBIL – DOLADĚNÍ HODIN V KONTAKTU */
 @media (max-width: 767px) {
 
   .footer-hours {
     align-items: center;
+  }
+
+  .footer-hours .footer-clock {
+    position: relative;
+    top: -2px;
+    font-size: 26px;
+    line-height: 1;
+  }
+
+}
+    /* MOBIL – RÁMEČKY PODLE POMĚRU FOTEK */
+@media (max-width: 767px) {
+
+  .service-image {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    background: transparent;
+    overflow: hidden;
+    border-radius: 16px;
+  }
+
+  .service-image img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: 160px;
+    object-fit: contain;
+    border-radius: 16px;
   }
 
 }
@@ -2310,6 +2339,7 @@ if ("IntersectionObserver" in window) {
 
 </body>
 </html>
+
 
 
 
