@@ -1617,7 +1617,29 @@
   }
 
 }
+    /* MOBIL – FOTKY SLUŽEB BEZ ZOOMU */
+@media (max-width: 767px) {
 
+  .service-image {
+    height: 160px;
+    background: #f9e8ec;
+  }
+
+  .service-image img {
+    object-fit: contain;
+    object-position: center;
+  }
+
+}
+
+    /* MOBIL – ZAROVNÁNÍ OTEVÍRACÍ DOBY */
+@media (max-width: 767px) {
+
+  .footer-hours {
+    align-items: center;
+  }
+
+}
 
   </style>
 </head>
@@ -2150,10 +2172,10 @@
 
   <h3>Otevírací doba</h3>
 
-  <p>
-   <span class="footer-icon footer-clock">◷</span>
-    Dle objednávek
-  </p>
+  <p class="footer-hours">
+  <span class="footer-icon footer-clock">◷</span>
+  Dle objednávek
+</p>
 
   <h3 class="footer-subheading">Možnosti platby</h3>
 
@@ -2288,6 +2310,7 @@ if ("IntersectionObserver" in window) {
 
 </body>
 </html>
+
 
 
 
