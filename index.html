@@ -1537,6 +1537,20 @@
   }
 
 }
+    /* MOBIL – STÁLÁ NAVIGACE PŘI SCROLLOVÁNÍ */
+@media (max-width: 767px) {
+
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  html {
+    scroll-padding-top: 80px;
+  }
+
+}
 
 
   </style>
@@ -1663,7 +1677,7 @@
 
     <div class="benefit-card">
       <img src="premiove-materialy.webp" alt="" loading="lazy">
-      <h2>Prémiové materiály</h2>
+      <h2>Kvalita</h2>
       <p>
         Používám kvalitní a ověřené produkty.
       </p>
@@ -2204,3 +2218,4 @@ if ("IntersectionObserver" in window) {
 
 </body>
 </html>
+
