@@ -2130,22 +2130,26 @@
     const navMenu = document.querySelector(".nav-menu");
 
     function closeMenu() {
-      navMenu.classList.remove("open");
-      menuToggle.classList.remove("active");
-      menuToggle.setAttribute("aria-expanded", "false");
-      menuToggle.setAttribute("aria-label", "Otevřít menu");
-    }
+  navMenu.classList.remove("open");
+  menuToggle.classList.remove("active");
+  menuToggle.setAttribute("aria-expanded", "false");
+  menuToggle.setAttribute("aria-label", "Otevřít menu");
 
-    menuToggle.addEventListener("click", () => {
-      const isOpen = navMenu.classList.toggle("open");
+  document.body.classList.remove("menu-open");
+}
 
-      menuToggle.classList.toggle("active", isOpen);
-      menuToggle.setAttribute("aria-expanded", String(isOpen));
-      menuToggle.setAttribute(
-        "aria-label",
-        isOpen ? "Zavřít menu" : "Otevřít menu"
-      );
-    });
+menuToggle.addEventListener("click", () => {
+  const isOpen = navMenu.classList.toggle("open");
+
+  menuToggle.classList.toggle("active", isOpen);
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  menuToggle.setAttribute(
+    "aria-label",
+    isOpen ? "Zavřít menu" : "Otevřít menu"
+  );
+
+  document.body.classList.toggle("menu-open", isOpen);
+});
 
     navMenu.querySelectorAll("a").forEach(link => {
       link.addEventListener("click", closeMenu);
@@ -2226,5 +2230,6 @@ if ("IntersectionObserver" in window) {
 
 </body>
 </html>
+
 
 
